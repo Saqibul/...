@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <title>CSE391</title>
+</head>
+
+<body class="quote" onload="quoteGen()">
+    <h1 style="font-family: 'Syne Mono', monospace;">Assignment 2</h1>
+    <div id="quoteDisplay">
+
+    </div>
+    <button type="button" id="button1" onclick="changeColour('bisque','1')"></button>
+    <button type="button" id="button2" onclick="changeColour('aquamarine','2')"></button>
+    <button type="button" id="button3" onclick="changeColour('brown','3')"></button>
+    <button type="button" id="button4" onclick="changeColour('azure','4')"></button>
+    <!--part 2-->
+    <h1 style="font-family: 'Syne Mono', monospace;">Hero Converter</h1>
+    <div id=" converter" style="border: solid;border-width: 2px; padding:5px; font-family: 'Courier New', Courier, monospace;">
+        Convert <input type="text" id="myText">
+        <span class="dropdown">
+            <button onclick="selection()" class="dropbtn" style="background-color: aliceblue;">Choose
+                conversion</button>
+            <span id="selectOptions" class="dropdown-content" style="left: 300px;">
+                <button onclick="convert(1)" style="background-color: aliceblue;">lb to kg</button>
+                <br>
+                <button onclick="convert(2)" style="background-color: aliceblue;">kg to lb</button>
+            </span>
+        </span>
+        <button onclick="convert()" style="background-color: aliceblue;"> Go </button>
+        <span id="showAnswer">
+
+        </span>
+    </div>
+    <!--part 3-->
+    <h1 style="font-family: 'Syne Mono', monospace;">Finding min, max, sum, average and the reverse order</h1>
+    <div id="order">
+        <div>
+            Input a series of number <input type="text" id="inputSeries" oninput="part2()">
+        </div>
+        Max:
+        <span id="max">
+        </span>
+        <br>
+        Min:
+        <span id="min">
+        </span>
+        <br>
+        Sum:
+        <span id="sum">
+        </span>
+        <br>
+        Average:
+        <span id="avg">
+        </span>
+        <br>
+        Reverse Order:
+        <span id="reverse">
+        </span>
+        <br>
+    </div>
+    <h1 style="font-family: 'Syne Mono', monospace;">Magic!</h1>
+    <textarea type="text" id="magictext" style="height: 300px; width: 800px;"></textarea>
+    <div>
+        <button onclick="document.getElementById('magictext').value=''" >Clear it</button>
+        <button onclick="capitalize()">Capitalize</button>
+        <button onclick="sorted()">Sort</button>
+        <button onclick="reverse()">Reverse</button>
+        <button onclick="stripBlank()">Strip Blank</button>
+        <button onclick="addNo()">Add Numbers</button>
+        <button onclick="shuffle()">Shuffle</button>
+    </div>
+    <script src="javaS.js"></script>
+</body>
+
+</html>
